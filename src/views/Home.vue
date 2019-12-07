@@ -1,18 +1,20 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div
+    class="bg-auto bg-center h-screen flex justify-center -mt-6"
+    :style="{ backgroundImage: `url(${backgroundImg})` }"
+  >
+    <h1 class="text-yellow-400 mt-10">Star Wars</h1>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import backgroundImg from "../assets/starwarswp.jpg";
 
 export default {
-  name: "home",
-  components: {
-    HelloWorld
+  data() {
+    return {
+      backgroundImg
+    };
   }
 };
 </script>
