@@ -1,9 +1,13 @@
 <template>
-  <div class="flex justify-center flex-col items-center">
+  <div class="flex justify-start flex-col items-center bg-black h-auto">
     <img class="w-56" src="../assets/star-wars-logo.jpg" alt="trooper" />
-    <div class="w-100" v-for="p in people" :key="p.id">
-      <h2 class="text-3xl">{{ p.name }}</h2>
-      <p>
+    <div
+      class="w-screen flex flex-col text-center"
+      v-for="p in people"
+      :key="p.id"
+    >
+      <h2 class="text-3xl text-yellow-400">{{ p.name }}</h2>
+      <p class="text-white">
         Height: {{ p.height }}cm
         <br />
         Weight: {{ p.mass }}kg
